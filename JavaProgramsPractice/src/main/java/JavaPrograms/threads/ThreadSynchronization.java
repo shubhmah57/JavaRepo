@@ -1,4 +1,4 @@
-package JavaPrograms.threads;
+package JavaPrograms.Threads;
 
 class Printer{
     public void printDocuments(int no, String docName){

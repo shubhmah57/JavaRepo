@@ -17,6 +17,10 @@ public class Program1 {
                 .collect(Collectors.toList());
         System.out.println(integerList);
 
+       Long count = Stream.of(1,3,4,5,6,1,5,4,4,4,5,5,6,4,2,11)
+                .mapToInt(i->i).count();
+        System.out.println(count);
+
         List<Person> personList = Arrays.asList(new Person("Shubham", 5000, "MALE"),
                 new Person("Rahul", 6000, "MALE"),
                 new Person("John", 8000, "MALE"),
@@ -35,7 +39,13 @@ public class Program1 {
                filter(x->x.getGender().equals("FEMALE"))
                        .map(Person::getSalary)
                                .reduce(Integer::max).get();
-
         System.out.println("MAX Salary" + maxSalary);
+
+     int sum = personList.stream()
+                     .filter(x->x.getGender().equals("MALE"))
+                        .map(Person::getSalary)
+                                .reduce(0, Integer::sum);
+        System.out.println("SUm Salary" + sum);
+
     }
 }

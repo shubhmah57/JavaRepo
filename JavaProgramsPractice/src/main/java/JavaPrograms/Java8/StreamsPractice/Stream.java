@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Stream {
+    public static Object of;
     private String customerName;
     private int points;
 

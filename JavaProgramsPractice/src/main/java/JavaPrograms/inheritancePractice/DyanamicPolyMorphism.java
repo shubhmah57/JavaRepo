@@ -17,6 +17,7 @@ public class DyanamicPolyMorphism {
         /*dyanamicPolyMorphism.printB();*/
 
         dyanamicPolyMorphism.printA();
+
             
         if(dyanamicPolyMorphism instanceof  ChildDyanamicPloymorphism)
             ((ChildDyanamicPloymorphism) dyanamicPolyMorphism).printB();

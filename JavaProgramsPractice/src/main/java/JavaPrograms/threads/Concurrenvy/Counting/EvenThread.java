@@ -1,4 +1,4 @@
-package JavaPrograms.threads.Concurrenvy.Counting;
+package JavaPrograms.Threads.Concurrenvy.Counting;
 
 public class EvenThread extends  Thread{
 

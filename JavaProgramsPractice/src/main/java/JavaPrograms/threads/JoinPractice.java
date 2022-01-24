@@ -1,4 +1,4 @@
-package JavaPrograms.threads;
+package JavaPrograms.Threads;
 
 public class JoinPractice {
     public static void main(String[] args) {

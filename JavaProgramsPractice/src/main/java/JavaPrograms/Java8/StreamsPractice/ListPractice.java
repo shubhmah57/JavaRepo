@@ -8,18 +8,29 @@ import java.util.stream.Collectors;
 public class ListPractice {
     public static void main(String[] args) {
         List<String> numbers = Arrays.asList("1", "2", "3", "4", "5", "6");
-        System.out.println("original list: " + numbers);
+//        System.out.println("original list: " + numbers);
 
         List<Integer> even = numbers.stream()
                 .map(s -> Integer.valueOf(s))
                 .filter(number -> number % 2 == 0)
                 .collect(Collectors.toList());
-        System.out.println(numbers.stream().map(s->Integer.valueOf(s)).count());
+//        System.out.println(numbers.stream().map(s->Integer.valueOf(s)).count());
         List<String> items = new ArrayList<>();
         items.add("Shubham");
         items.add("Shivani");
         items.add("Rahul");
         items.add("Vani");
-        System.out.println(items.stream().filter(x->x.startsWith("S")).count());
+//        System.out.println(items.stream().filter(x->x.startsWith("S")).count());
+        int []a = new int[even.size()];
+        List<Integer> list = Arrays.asList(1,3,4,5,6);
+        list.stream().forEach(x-> {
+            int k =0;
+            a[k] = x;
+            k++;
+        });
+
+        for (int p: a){
+            System.out.println(p);
+        }
     }
 }

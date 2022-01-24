@@ -1,4 +1,4 @@
-package JavaPrograms.threads;
+package JavaPrograms.Threads;
 
 public class BaeldungSynchronizedMethods {
     public int getSum() {

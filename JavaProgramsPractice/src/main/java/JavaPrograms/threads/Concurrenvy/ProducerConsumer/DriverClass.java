@@ -1,4 +1,4 @@
-package JavaPrograms.threads.Concurrenvy.ProducerConsumer;
+package JavaPrograms.Threads.Concurrenvy.ProducerConsumer;
 
 public class DriverClass {
     public static void main(String[] args) {

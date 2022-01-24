@@ -1,4 +1,4 @@
-package JavaPrograms.threads.Concurrenvy.ProducerConsumer;
+package JavaPrograms.Threads.Concurrenvy.ProducerConsumer;
 
 import java.util.LinkedList;
 

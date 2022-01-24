@@ -1,8 +1,8 @@
-package JavaPrograms.threads;
+package JavaPrograms.Threads;
 
 class Counting {
     void printCounting(int i, String name){
-        System.out.println(i + name) ;
+        System.out.println(i + " " + name) ;
     }
 }
 

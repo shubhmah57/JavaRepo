@@ -11,6 +11,11 @@ public class PhagwaraEmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    public void getEmployee() {
+
+    }
+
+    @Override
     public void getSalary() {
         System.out.println("THe salary: " + "100000");
     }

@@ -2,7 +2,7 @@ public class SecondLargest{
 	
 	public static void main(String[] args){
 	
-	int a[] = {1,3,700,1,9};
+	int a[] = {9,6,7,8,3,2,4};
 	int largest =  Integer.MIN_VALUE;
 	int second = Integer.MIN_VALUE;
 	for(int i =0; i < a.length; i++){

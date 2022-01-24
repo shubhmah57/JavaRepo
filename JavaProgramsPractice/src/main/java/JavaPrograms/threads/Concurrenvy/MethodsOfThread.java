@@ -1,4 +1,4 @@
-package JavaPrograms.threads.Concurrenvy;
+package JavaPrograms.Threads.Concurrenvy;
 
 public class MethodsOfThread {
     public static void main(String[] args) {

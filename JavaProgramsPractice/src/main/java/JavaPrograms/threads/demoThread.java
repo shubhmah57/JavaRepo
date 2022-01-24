@@ -1,4 +1,4 @@
-package JavaPrograms.threads;
+package JavaPrograms.Threads;
 
 class  A12 implements Runnable{
 

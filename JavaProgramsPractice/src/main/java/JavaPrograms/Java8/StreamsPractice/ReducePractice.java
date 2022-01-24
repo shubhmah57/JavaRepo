@@ -19,15 +19,20 @@ public class ReducePractice {
         int sum =  agesList.stream().reduce(0, Integer::sum);
         System.out.println(sum);
 
+        agesList.stream().reduce(1, (a,b)-> a+b);
+
         List<Employee> employeeLIst = Arrays.asList(new Employee("Phg", "road", 3333.44),
                 new Employee("Jal", "near hospital", 444.33),
                 new Employee("Jal", "near hospital", 544.33),
                 new Employee("Jal", "near hospital", 744.33),
                 new Employee("Jal", "near hospital", 4448.6));
 
-        Double averageSalary = employeeLIst.stream().filter(employee -> employee.getCity().equals("Jal"))
+        Double averageSalary = employeeLIst.stream()
+                .filter(employee -> employee.getCity().equals("Jal"))
                 .map(Employee::getSalary)
-                .mapToDouble(i->i).average().getAsDouble();
+                .mapToDouble(i->i)
+                .average()
+                .getAsDouble();
         employeeLIst.stream().filter(e->e.getCity().equals("Jal"))
                         .map(x->x.getSalary())
                                 .mapToDouble(h->h).count();

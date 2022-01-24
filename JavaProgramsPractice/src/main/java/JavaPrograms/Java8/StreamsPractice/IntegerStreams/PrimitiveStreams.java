@@ -11,6 +11,12 @@ public class PrimitiveStreams {
         int [] numbers = {1,2,3,4,5,6,7,8,9,10,11};
         //Find the sum
         System.out.println("The sum is: "  +Arrays.stream(numbers).filter(x-> x >2).map(z-> z * 3).sum());
+        int sum  = Arrays.stream(numbers).sum();
+
+        System.out.println("The sum is" + sum);
+
+        int sum1 = Arrays.stream(numbers).filter(x-> x> 3).sum();
+        System.out.println(sum1);
 
         // Find the sorted order
         Arrays.stream(numbers).sorted().forEach(System.out::print);
