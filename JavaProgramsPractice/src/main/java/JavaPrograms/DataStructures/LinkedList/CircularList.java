@@ -7,7 +7,7 @@ public class CircularList {
     public static void main(String[] args) {
 
         System.out.println("Enter Numbers");
-        Node headNode = new Node(null,1);
+        Node headNode = new Node(1,null);
         Node circularNode = populateCircularList(headNode);
         circularNode.next=headNode;
         int key =9;
@@ -24,7 +24,7 @@ public class CircularList {
             System.out.println("Enter Value");
             Scanner scanner = new Scanner(System.in);
             int value = scanner.nextInt();
-            Node newNode = new Node(null,value);
+            Node newNode = new Node(value,null);
             if(headNode.next==null){
                 headNode.next = newNode;
             }

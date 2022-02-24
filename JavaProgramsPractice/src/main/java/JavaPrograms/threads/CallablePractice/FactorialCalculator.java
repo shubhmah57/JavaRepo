@@ -39,6 +39,7 @@ public class FactorialCalculator {
          * via thread and its returning a value which
          * traditional run method doesn't provides.
          */
+        System.out.println(Thread.currentThread().getName());
         Future<Long> future = es.submit(callable);
         System.out.println("Reading from somewhere....");
        // Thread.sleep(100000);

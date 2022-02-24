@@ -1,6 +1,5 @@
 package JavaPrograms.DataStructures.LinkedList;
 
-import JavaPrograms.collections.HashingBasedDS.HashMapPractice;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,14 +18,24 @@ public class LinkedListImpl {
     }
 
     public static void main(String[] args) {
-        int[] a = {5,-12,1,43,51};
+        int[] a = {1,2,3,4,13,14};
+        int []b = {6,7,8,9,10,11,12};
         LinkedListImpl list1 = new LinkedListImpl();
         for(int p: a){
             list1.addElement(p);
         }
+        LinkedListImpl list2 = new LinkedListImpl();
+        for(int p: b){
+            list2.addElement(p);
+        }
+        System.out.println("-------List1--------");
         list1.traverseList();
+        System.out.println();
+        System.out.println("-------List2--------");
+        list2.traverseList();
+        //list1.findMid();
+        mergeList(list1,list2);
 
-        list1.findMid();
 
     }
 
@@ -45,11 +54,11 @@ public class LinkedListImpl {
 
     private void traverseList() {
         Node traverseNode = headNode;
+        System.out.println("The elements are:");
         while(traverseNode!=null){
-
+            System.out.print(traverseNode.data + " ");
             traverseNode = traverseNode.next;
         }
-        System.out.println(findGreatest(headNode).data);
     }
 
     private Node findGreatest(Node headNode) {
@@ -77,5 +86,11 @@ public class LinkedListImpl {
           tailNode.next = node;
       }
         tailNode = node;
+    }
+
+    public static void mergeList(LinkedListImpl list1, LinkedListImpl list2){
+
+
+
     }
 }

@@ -5,7 +5,7 @@ public class RemoveElement {
         RemoveElement removeElement = new RemoveElement();
         /*int a[] = {0,1,2,2,3,0,4,2};*/
         /*int a[] = {3,2,2,3};*/
-        int a[] = {5, 0, 3, 0, 1, 2, 0, 0, 6};
+        int a[] = {5, 7, 3, 0, 1, 2, 0, 0, 6};
         int val = 0;
         removeElement.start(a,val);
     }

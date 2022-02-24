@@ -4,12 +4,13 @@ public class Node {
 
     Node next;
     int data;
-    Node(){
-
+    Node(int i){
+        data = i;
+        next = null;
     }
-    Node(Node next, int data){
-        this.next = next;
+    Node(int data, Node node){
         this.data = data;
+        this.next = node;
     }
 
 }

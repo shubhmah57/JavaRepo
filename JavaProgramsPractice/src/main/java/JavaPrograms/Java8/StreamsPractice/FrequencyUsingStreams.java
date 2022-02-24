@@ -1,6 +1,5 @@
 package JavaPrograms.Java8.StreamsPractice;
 
-import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

@@ -36,6 +36,7 @@ public class ReducePractice {
         employeeLIst.stream().filter(e->e.getCity().equals("Jal"))
                         .map(x->x.getSalary())
                                 .mapToDouble(h->h).count();
+        double sum1 = employeeLIst.stream().map(x->x.getSalary()).reduce(0.0,(a,b)->a+b);
         System.out.println("Average Salary is:" + averageSalary);
     }
 }
