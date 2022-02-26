@@ -1,7 +1,11 @@
 package JavaPrograms.Model;
 
+import java.util.Comparator;
+import java.util.Objects;
+
 public class Employee {
 
+    private int id;
     private String name;
 
     private int age;
@@ -12,6 +16,12 @@ public class Employee {
         this.designation = designation;
     }
 
+    public Employee(int id, String name, int age, String designation) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.designation = designation;
+    }
     private String designation;
 
     public String getName() {
@@ -38,12 +48,33 @@ public class Employee {
         this.designation = designation;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "Employee{" +
+        return "id='" + id + '\'' +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", designation='" + designation + '\'' +
-                '}';
+                ", designation='" + designation + '\'';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+        Employee e = (Employee) o;
+        return this.age==e.age;
+    }
+
+    @Override
+    public int hashCode() {
+        return age;
     }
 }
