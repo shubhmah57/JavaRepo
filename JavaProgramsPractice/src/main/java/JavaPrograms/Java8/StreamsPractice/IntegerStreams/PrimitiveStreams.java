@@ -38,5 +38,8 @@ public class PrimitiveStreams {
         for(int i : integerLis){
             System.out.println("Values:" + i);
         }
+
+        int []a = {6,8,9,12,20,40};
+        System.out.println(Arrays.stream(a).map(x->x*x).filter(x->x>100).average().getAsDouble());
     }
 }
