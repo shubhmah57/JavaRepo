@@ -2,11 +2,11 @@ package JavaPrograms.DataStructures.String;
 
 import org.jetbrains.annotations.NotNull;
 
-public class GoldManEncodingDecoding {
+public class EncodingDecoding {
     public static void main(String[] args) {
-        String message = "opened";
-        String key = "123";
-        GoldManEncodingDecoding object = new GoldManEncodingDecoding();
+        String message = "open";
+        String key = "1234";
+        EncodingDecoding object = new EncodingDecoding();
         String encodedMessage = object.encode(message,key);
     }
 
