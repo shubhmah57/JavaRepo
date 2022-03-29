@@ -24,6 +24,12 @@ public class NewMethodComparing {
 
         employeeList.sort(reversedComparator);
 
+        employeeList.
+                stream()
+                .sorted(employeeComparator.reversed())
+                .findFirst()
+                .ifPresent(x-> System.out.println(x.getName()));
+
         System.out.println(employeeList);
 
         Employee employees =employeeList

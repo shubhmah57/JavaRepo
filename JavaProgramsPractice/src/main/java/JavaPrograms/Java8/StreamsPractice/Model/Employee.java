@@ -7,6 +7,17 @@ public class Employee {
 
     private Double salary;
 
+    private String  gender;
+
+
+
+    public Employee(String city, String address, Double salary, String gender) {
+        this.city = city;
+        this.address = address;
+        this.salary = salary;
+        this.gender = gender;
+    }
+
     public Double getSalary() {
         return salary;
     }
@@ -42,11 +53,20 @@ public class Employee {
         this.address = address;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
                 "city='" + city + '\'' +
                 ", address='" + address + '\'' +
+                ", gender='" + gender + '\''+
                 '}';
     }
 }

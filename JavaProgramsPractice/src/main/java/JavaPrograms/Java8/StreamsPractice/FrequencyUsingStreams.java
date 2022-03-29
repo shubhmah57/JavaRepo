@@ -17,6 +17,8 @@ public class FrequencyUsingStreams {
                 .stream()
                 .map(e->e.getKey()+e.getValue()+"")
                 .forEach(System.out::print);
+
+
         System.out.println();
         Map<String,String> map = new HashMap<String,String>();
 
@@ -33,5 +35,6 @@ public class FrequencyUsingStreams {
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
+
     }
 }

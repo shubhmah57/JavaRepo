@@ -1,19 +1,21 @@
 package JavaPrograms.DataStructures.Recursion;
 
-public class Jumps {
+public class JUmps {
+
     public static void main(String[] args) {
-        Jumps j = new Jumps();
-        int a[] = {1,3,4,5};
-        j.calcualteJump(a, 0);
-    }
 
-    private void calcualteJump(int[] f, int size) {
-
-        if(size >= f.length){
-
+            int count=0, current=0;
+         int []nums = {2,3,1,1,4};
+         int destination = nums.length-1;
+        while (current + nums[current] < destination) {
+            int max = current;
+            for (int i = current + 1; i <= destination && i <= current + nums[current]; i++)
+                if (i + nums[i] > max + nums[max])
+                    max = i;
+            current = max;
+            count++;
         }
-
+        System.out.println(count+1);
     }
-
 
 }
