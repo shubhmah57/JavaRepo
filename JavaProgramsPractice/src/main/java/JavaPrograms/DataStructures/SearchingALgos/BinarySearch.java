@@ -2,37 +2,53 @@ package JavaPrograms.DataStructures.SearchingALgos;
 
 public class BinarySearch {
     public static void main(String[] args) {
-        int [] a = { 5,6,7,8,9,10,11};
-        int value = 990;
-        int low =0, high = a.length-1;
-        int mid =0;
-//        for(int i =0; i <a.length; i++){
-//            mid= (low + high)/2;
-//            if(value<a[mid]){
-//                high=mid-1;
-//            }
-//            else if(value > a[mid]){
-//                low=mid+1;
-//            }
-//            else {
-//                System.out.println(mid);
-//                break;
-//            }
-//        }
+        int[] a = {3,2,1};
+        int target =1;
+        int low=0;
+        int high=a.length-1;
+        int index=-1;
+        if(a[low]<a[high]){
+            index = increasingBinarySearch(a, low, high, target);
+        }
+        else {
+            index = decreasingBinarySearch(a,low, high, target);
+        }
+        System.out.println(index);
+    }
 
-        while(low<high){
-            mid = (low + high)/2;
-            if(value>a[mid]){
-                low = mid+1;
+    private static int decreasingBinarySearch(int[] a, int low, int high, int target) {
+        int index =0;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if(a[mid]==target){
+                index=mid;
             }
-            else if( value < a[mid]){
-                high = mid -1;
+
+            if(a[mid]>target){
+                low=mid+1;
             }
             else {
-                System.out.println(mid);
-                return;
+                high= mid-1;
             }
         }
-        System.out.println(-1);
+        return index;
+    }
+
+    public static int increasingBinarySearch(int[] a, int low, int high, int target){
+        int index =0;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if(a[mid]==target){
+                index=mid;
+            }
+
+            if(a[mid]<target){
+                low=mid+1;
+            }
+            else {
+                high= mid-1;
+            }
+        }
+        return index;
     }
 }

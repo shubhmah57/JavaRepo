@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 class LengthEncoding {
 	public static void main (String[] args) {
-		String str = "wwwwaaadexxxxxxghghhg";
+		String str = "abc";
 		StringBuilder sb = new StringBuilder();
 		Map<Character,Integer> map = new HashMap<>();
 		for(int i =0; i < str.length();i++){
@@ -14,13 +14,29 @@ class LengthEncoding {
 		    }
 		    else{
 		        if(map.size()>0){
-					map.forEach((k,v)-> sb.append(k).append(v));
+					map.forEach((k,v)-> {
+						if(v==1){
+							sb.append(k);
+						}
+						else {
+							sb.append(k).append(v);
+						}
+					});
 		            map.clear();
 		        }
 		        map.put(str.charAt(i),1);
 		    }
 		}
-		map.forEach((k,v)->sb.append(k).append(v));
+		map.forEach((k,v)->{
+			if(v==1){
+				sb.append(k);
+			}
+			else {
+				sb.append(k).append(v);
+			}
+		});
 		Stream.of(sb).forEach(System.out::println);
+
+		int l = sb.toString().toCharArray().length;
 	}
 }
