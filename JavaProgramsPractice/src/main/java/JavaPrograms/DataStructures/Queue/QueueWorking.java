@@ -1,6 +1,7 @@
 package JavaPrograms.DataStructures.Queue;
 
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class QueueWorking {
     public static void main(String[] args) {

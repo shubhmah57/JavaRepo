@@ -1,23 +1,35 @@
 package JavaPrograms.DataStructures.Arrays;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TwoSum {
 
     public static void main(String[] args) {
-        int nums [] = {2, 7, 3 ,6, 9};
-        int target = 9;
-        for (int i = 0 ; i < nums.length ; i++){
-            Map<Integer, Integer> maps = new HashMap<Integer, Integer>();
-            int complement = target - nums[i];
-            if(maps.containsKey(complement)){
-                System.out.println(new int[]{maps.get(complement), i});
-            }
-            maps.put(nums[i], i);
+        int nums[] = {3,3};
+        int target = 6;
+
+        List<Integer> numbersList = new ArrayList<>();
+        for (int i : nums) {
+            numbersList.add(i);
         }
-        throw new IllegalArgumentException("No RomanToInteger");
+        int p = 0, q = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int value = target - numbersList.get(i);
+            int index = numbersList.indexOf(value);
+            if (index >= 0 && index != i) {
+                p = i;
+                q = index;
+                break;
+            }
+        }
+        System.out.println(p + " " + q);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
+
+
 
