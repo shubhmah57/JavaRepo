@@ -1,6 +1,6 @@
 package JavaPrograms.DataStructures.Recursion;
 
-public class JUmps {
+public class Jumps {
 
     public static void main(String[] args) {
 
