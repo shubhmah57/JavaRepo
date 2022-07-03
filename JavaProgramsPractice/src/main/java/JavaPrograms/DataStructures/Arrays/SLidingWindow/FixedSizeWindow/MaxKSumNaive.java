@@ -1,4 +1,4 @@
-package JavaPrograms.DataStructures.Arrays.SLidingWindow;
+package JavaPrograms.DataStructures.Arrays.SLidingWindow.FixedSizeWindow;
 
 public class MaxKSumNaive {
 

@@ -1,4 +1,4 @@
-package JavaPrograms.DataStructures.Arrays;
+package JavaPrograms.DataStructures.Arrays.SLidingWindow.VariableSizeWindow;
 
 import java.util.*;
 
